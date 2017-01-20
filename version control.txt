@@ -1,0 +1,52 @@
+*** Commit ***
+ Representa los cambios hechos en cada nueva version. Genera diferencias con las versiones
+anteriores. Una buena práctica, es mantener los commits chicos, para que no se complique
+entenderlos, cuando las diferencias sean grandes. Una regla es hacer un commit por cada 
+cambio lógico.  Cada commit debe tener un proposito claro y lógico.
+
+*** Repository ***
+ Coleccion de archivos que componen un programa.  Es lo mismo que un directorio normal, solo que un repositorio guarda informacion sobre
+el historial de las versiones desde que se creo. Esto se guarda en un directorio oculto que se llama .git. 
+    
+-Crear un repository-
+Puede hacerse en un directorio existente o uno nuevo. Se usa el comando git init. Cuando se crea un repositorio, no contiene
+ningun commit 
+
+*** Comandos ***
+-git log: Lista los commits hechos recientemente
+
+-git checkout: Permite analizar cada commit realizado, posicionandonos temporalmente en esa version del commit. Se utiliza con el id del commit.
+Hacer un check out de una version previa, resultara en que todos los archivos revertiran sus estados al que tenian cuando el commit fue realizado. Todos los 
+archivos tendran un estado consistente en el tiempo.  
+
+-git diff: muestra los cambios de un commit a otro. Se utiliza con dos ids de commits que se desean ver. El primer id pasado como argumento es el 
+"original" y el segundo seria la nueva version. Muestra que se agrego o quito de la version original a la nueva version. 
+
+-git status: Muestra los cambios desde el ultimo commit
+
+
+
+-------------------- Reflections -----------------------------------------
+-What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?-
+Pros:
+	- Podes elegir cuando guardar una nueva version
+	- Evitas guardar cambios innecesarios
+Cons:
+	- Podes olvidarte de guardar los cambios
+	- Se puede cortar la luz o perder conexion a internet antes de guardar
+
+--- Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?---
+ Porque tienen propositos diferentes, mientras que google docs permite guardar archivos, puede que cada uno
+sea independiente del otro (Que es lo mas probable). Mientras que en git, el proposito es guardar versiones
+de un programa, en el que interactúan mas de un archivo en forma conjunta. How can you use the commands git log and git diff to view the history of files?
+
+---How can you use the commands git log and git diff to view the history of files?---
+ Escribiendolos en la linea de comandos, puedo ver los cambios que se realizaron en distintas versiones de un archivo. 
+
+---Now that you have your workspace set up, what do you want to try using Git for?---
+ Para controlar versiones de los distintos proyectos que pueda hacer, y los que
+pueda hacer en la facultad con mis compañeros. 
+
+--- What happens when you initialize a repository? Why do you need to do it? ---
+ Se crea un directorio oculto con metadatos que rastrean los cambios realizados desde que se creo el repositorio. No se crea ningun commit y si ya existen archivos, no se
+agregan al control de versiones. Necesito hacerlo para poder compartir el repositorio con otros usuarios. 
